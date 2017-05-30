@@ -23,6 +23,6 @@
 
 namespace Altapay\Response;
 
-class ChargeSubscriptionResponse extends ReservationOfFixedAmountResponse
+class ChargeSubscriptionResponse extends CaptureReservationResponse
 {
 }
