@@ -23,6 +23,8 @@
 
 namespace Altapay\Response;
 
+use Altapay\Response\Embeds\Transaction;
+
 class ReserveSubscriptionResponse extends ChargeSubscriptionResponse
 {
   protected $childs = [
