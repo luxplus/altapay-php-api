@@ -25,4 +25,36 @@ namespace Altapay\Response;
 
 class ReserveSubscriptionResponse extends ChargeSubscriptionResponse
 {
+  protected $childs = [
+        'Transactions' => [
+            'class' => Transaction::class,
+            'array' => 'Transaction'
+        ],
+    ];
+
+    /**
+     * @var float
+     */
+    public $PreauthAmount;
+
+    public $PreauthCurrency;
+
+    public $Result;
+
+    public $PreauthResult;
+
+    /**
+     * @var Transaction[]
+     */
+    public $Transactions;
+
+    /**
+     * @param float PreauthAmount
+     * @return ReserveSubscriptionResponse
+     */
+    public function setPreauthAmount($PreauthAmount)
+    {
+        $this->PreauthAmount = (float) $PreauthAmount;
+        return $this;
+    }
 }
