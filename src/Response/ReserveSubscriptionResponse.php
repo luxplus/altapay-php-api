@@ -44,8 +44,6 @@ class ReserveSubscriptionResponse extends ChargeSubscriptionResponse
     public $Result;
 
     public $PreauthResult;
-  
-    public $MerchantErrorMessage
 
     /**
      * @var Transaction[]
@@ -59,16 +57,6 @@ class ReserveSubscriptionResponse extends ChargeSubscriptionResponse
     public function setPreauthAmount($PreauthAmount)
     {
         $this->PreauthAmount = (float) $PreauthAmount;
-        return $this;
-    }
-  
-    /**
-     * @param float MerchantErrorMessage
-     * @return ReserveSubscriptionResponse
-     */
-    public function setMerchantErrorMessage($MerchantErrorMessage)
-    {
-        $this->MerchantErrorMessage = $MerchantErrorMessage;
         return $this;
     }
 }
