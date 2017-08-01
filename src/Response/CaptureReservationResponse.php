@@ -25,7 +25,7 @@ namespace Altapay\Response;
 
 use Altapay\Response\Embeds\Transaction;
 
-class CaptureReservationResponse extends AbstractResponse
+class CaptureReservationResponse extends CallbackResponse
 {
 
     protected $childs = [
