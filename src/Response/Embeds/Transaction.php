@@ -82,6 +82,11 @@ class Transaction extends AbstractResponse
     public $AuthType;
 
     /**
+     * New parameter added 2018-07-31
+     */
+    public $PaymentSource;
+
+    /**
      * @var float
      */
     public $ReservedAmount;
@@ -245,6 +250,11 @@ class Transaction extends AbstractResponse
     public function setFraudRiskScore($FraudRiskScore)
     {
         $this->FraudRiskScore = (float) $FraudRiskScore;
+        return $this;
+    }
+
+    public function setPaymentSource($PaymentSource) {
+        $this->PaymentSource = $PaymentSource;
         return $this;
     }
 }

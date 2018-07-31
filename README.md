@@ -1,17 +1,17 @@
-Altapay - PHP API &ndash; [![Build Status](https://travis-ci.org/lsv/altapay-php-api.svg?branch=master)](https://travis-ci.org/lsv/altapay-php-api) [![codecov](https://codecov.io/gh/lsv/altapay-php-api/branch/master/graph/badge.svg)](https://codecov.io/gh/lsv/altapay-php-api) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ec01dcf9-d9dd-4227-b116-8c72617b79bc/mini.png)](https://insight.sensiolabs.com/projects/ec01dcf9-d9dd-4227-b116-8c72617b79bc)
+Altapay - PHP API  
 =================
 
 For accessing Altapay payment gateway through the API
 
 ### Install
 
-`composer require lsv/altapay-php-api`
+`composer require luxplus/altapay-php-api`
 
 or add it to your `composer.json` file
 
 ```json
 "require": {
-    "lsv/altapay-php-api": "^1.0"
+    "luxplus/altapay-php-api": "^1.0"
 }
 ```
 
@@ -46,3 +46,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
