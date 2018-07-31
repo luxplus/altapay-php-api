@@ -69,5 +69,7 @@ class ReleaseReservationResponse extends AbstractResponse
      * @var string
      */
     public $MerchantErrorMessage;
+    public $CardHolderErrorMessage;
+    public $CardHolderMessageMustBeShown;
 
 }
