@@ -4,4 +4,8 @@
 /bin
 /.env.php
 /_.env.php
-composer.lock
+/.idea
+.idea/vcs.xml
+.idea/php.xml
+.idea/deployment.xml
+.idea/
