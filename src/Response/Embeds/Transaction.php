@@ -163,6 +163,8 @@ class Transaction extends AbstractResponse
      */
     public $ReconciliationIdentifiers;
 
+    public $IsTokenized;
+
     /**
      * @param string $CreatedDate
      * @return Transaction
