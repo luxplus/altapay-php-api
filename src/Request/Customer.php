@@ -74,6 +74,20 @@ class Customer extends AbstractSerializer
     private $organisationNumber;
 
     /**
+     * @return CardHolder
+     */
+    public function getCardholder() {
+        return $this->cardholder;
+    }
+
+    /**
+     * @param CardHolder $cardholder
+     */
+    public function setCardholder($cardholder) {
+        $this->cardholder = $cardholder;
+    }
+
+    /**
      * The country specific personal identity number for the customer,
      * for countries where it is applicable. eg. Norway, Sweden, Finland
      *
@@ -94,6 +108,13 @@ class Customer extends AbstractSerializer
      * @var Address
      */
     private $shipping;
+
+    /**
+     * Credit Card (Optional 3D Secure 2 parameters)
+     *
+     * @var CardHolder
+     */
+    private $cardholder;
 
     /**
      * The birth date of the customer
@@ -326,8 +347,24 @@ class Customer extends AbstractSerializer
 
         $this->setAddress($output, 'billing_', $this->billing);
         $this->setAddress($output, 'shipping_', $this->shipping);
+        $this->serializeCardholder($output, 'cardholder_', $this->cardholder);
 
         return $output;
+    }
+    private static function serializeCardholder(array &$output, $key, CardHolder $object) {
+        $fields = [
+            'name' => 'name',
+            'email' => 'email',
+            'workPhone' => 'workphone',
+            'homePhone' => 'homephone',
+            'mobilePhone' => 'mobilephone',
+        ];
+
+        foreach ($fields as $fieldKey => $fieldName) {
+            if ($object->{$fieldKey} !== null) {
+                $output[$key . $fieldName] = $object->{$fieldKey};
+            }
+        }
     }
 
     private static function setAddress(array &$output, $key, Address $object)
