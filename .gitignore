@@ -9,3 +9,4 @@
 .idea/php.xml
 .idea/deployment.xml
 .idea/
+composer.lock
